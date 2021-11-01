@@ -55,11 +55,31 @@ class LabData {
         DE3_DataEntry: [],
         DE4_DataSummaryOutput: [],
       },
+
+      {
+        DE0_DataID: 5,
+        DE1_DataLog_TimeStart: [],
+        DE2_DataLog_TimeFinish: [],
+        DE3_DataEntry: [],
+        DE4_DataSummaryOutput: [],
+      },
     ];
   }
 
-  fxA0_printLabData = (dataSection, dataAttribute) => {
-    console.log(this.Storage);
+  fxA0_printLabDataOverview = (dataSection, dataAttribute) => {
+    if (dataSelection === 0) {
+      console.log(this.Storage[0]);
+    } else if (dataSelection === 1) {
+      console.log(this.Storage[1]);
+    } else if (dataSelection === 2) {
+      console.log(this.Storage[2]);
+    } else if (dataSelection === 3) {
+      console.log(this.Storage[3]);
+    } else if (dataSelection === 4) {
+      console.log(this.Storage[4]);
+    } else if (dataSelection === 5) {
+      console.log(this.Storage[5]);
+    } else { console.log(this.Storage); }
   }
 
   fxA1_addLabData = (
@@ -75,35 +95,35 @@ class LabData {
       this.Storage[0].DA3_DataEntry.push(DataEntry);
       this.Storage[0].DA4_DataSummaryOutput.push(SummaryOutput);
     } else if (DataID === 1) {
-      this.Storage[1].DA1_DataLog_TimeStart.push(TimeStart);
-      this.Storage[1].DA2_DataLog_TimeFinish.push(TimeFinish);
-      this.Storage[1].DA3_DataEntry.push(DataEntry);
-      this.Storage[1].DA4_DataSummaryOutput.push(SummaryOutput);
+      this.Storage[1].DB1_DataLog_TimeStart.push(TimeStart);
+      this.Storage[1].DB2_DataLog_TimeFinish.push(TimeFinish);
+      this.Storage[1].DB3_DataEntry.push(DataEntry);
+      this.Storage[1].DB4_DataSummaryOutput.push(SummaryOutput);
     } else if (DataID === 2) {
-      this.Storage[2].DA1_DataLog_TimeStart.push(TimeStart);
-      this.Storage[2].DA2_DataLog_TimeFinish.push(TimeFinish);
-      this.Storage[2].DA3_DataEntry.push(DataEntry);
-      this.Storage[2].DA4_DataSummaryOutput.push(SummaryOutput);
+      this.Storage[2].DC1_DataLog_TimeStart.push(TimeStart);
+      this.Storage[2].DC2_DataLog_TimeFinish.push(TimeFinish);
+      this.Storage[2].DC3_DataEntry.push(DataEntry);
+      this.Storage[2].DC4_DataSummaryOutput.push(SummaryOutput);
     } else if (DataID === 3) {
-      this.Storage[3].DA1_DataLog_TimeStart.push(TimeStart);
-      this.Storage[3].DA2_DataLog_TimeFinish.push(TimeFinish);
-      this.Storage[3].DA3_DataEntry.push(DataEntry);
-      this.Storage[3].DA4_DataSummaryOutput.push(SummaryOutput);
+      this.Storage[3].DD1_DataLog_TimeStart.push(TimeStart);
+      this.Storage[3].DD2_DataLog_TimeFinish.push(TimeFinish);
+      this.Storage[3].DD3_DataEntry.push(DataEntry);
+      this.Storage[3].DD4_DataSummaryOutput.push(SummaryOutput);
     } else if (DataID === 4) {
-      this.Storage[4].DA1_DataLog_TimeStart.push(TimeStart);
-      this.Storage[4].DA2_DataLog_TimeFinish.push(TimeFinish);
-      this.Storage[4].DA3_DataEntry.push(DataEntry);
-      this.Storage[4].DA4_DataSummaryOutput.push(SummaryOutput);
+      this.Storage[4].DE1_DataLog_TimeStart.push(TimeStart);
+      this.Storage[4].DE2_DataLog_TimeFinish.push(TimeFinish);
+      this.Storage[4].DE3_DataEntry.push(DataEntry);
+      this.Storage[4].DE4_DataSummaryOutput.push(SummaryOutput);
     } else if (DataID === 5) {
-      this.Storage[5].DA1_DataLog_TimeStart.push(TimeStart);
-      this.Storage[5].DA2_DataLog_TimeFinish.push(TimeFinish);
-      this.Storage[5].DA3_DataEntry.push(DataEntry);
-      this.Storage[5].DA4_DataSummaryOutput.push(SummaryOutput);
+      this.Storage[5].DF1_DataLog_TimeStart.push(TimeStart);
+      this.Storage[5].DF2_DataLog_TimeFinish.push(TimeFinish);
+      this.Storage[5].DF3_DataEntry.push(DataEntry);
+      this.Storage[5].DF4_DataSummaryOutput.push(SummaryOutput);
     } else { console.log(Error) }
   }
 }
 
-const labTest = new Lab(
+const labTest = new LabData(
   "To test Lab Class",
   "Lab Code functionability",
   "11.01.21",
@@ -115,10 +135,10 @@ const labTest = new Lab(
 );
 
 labTest.fxA1_addLabData(
-  1,
+  0,
   2100,
   2106,
-  "This is a test",
+  ["Hello", "My Name is Von"],
   "1 string was added"
 );
 
