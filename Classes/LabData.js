@@ -25,7 +25,7 @@ class LabData {
       },
 
       {
-        DB0_DataID: 0,
+        DB0_DataID: 1,
         DB1_DataLog_TimeStart: [],
         DB2_DataLog_TimeFinish: [],
         DB3_DataEntry: [],
@@ -33,7 +33,7 @@ class LabData {
       },
 
       {
-        DC0_DataID: 0,
+        DC0_DataID: 2,
         DC1_DataLog_TimeStart: [],
         DC2_DataLog_TimeFinish: [],
         DC3_DataEntry: [],
@@ -41,7 +41,7 @@ class LabData {
       },
 
       {
-        DD0_DataID: 0,
+        DD0_DataID: 3,
         DD1_DataLog_TimeStart: [],
         DD2_DataLog_TimeFinish: [],
         DD3_DataEntry: [],
@@ -49,7 +49,7 @@ class LabData {
       },
 
       {
-        DE0_DataID: 0,
+        DE0_DataID: 4,
         DE1_DataLog_TimeStart: [],
         DE2_DataLog_TimeFinish: [],
         DE3_DataEntry: [],
@@ -102,3 +102,24 @@ class LabData {
     } else { console.log(Error) }
   }
 }
+
+const labTest = new Lab(
+  "To test Lab Class",
+  "Lab Code functionability",
+  "11.01.21",
+  "11.01.21",
+  1532,
+  2100,
+  "Good",
+  "Good",
+);
+
+labTest.fxA1_addLabData(
+  1,
+  2100,
+  2106,
+  "This is a test",
+  "1 string was added"
+);
+
+labTest.fxA0_printLabData();
