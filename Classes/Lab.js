@@ -61,23 +61,26 @@ class Lab {
   }
 }
 
-const test00 = new Lab(
-  "11.01.21",
-  "Testing of DataTypes",
-  "11.01.21",
-  "",
-  1100,
-  1300,
-  "High as a kite",
-  "High as a kite",
-);
+// const test00 = new Lab(
+//   "11.01.21",
+//   "Testing of DataTypes",
+//   "11.01.21",
+//   "",
+//   1100,
+//   1300,
+//   "High as a kite",
+//   "High as a kite",
+// );
 
-const message = "This is a message";
-const myObj = {
-  i1: ["Hello World"],
-  i2: ["Hello Billy"],
-  i3: ["Hello Sara"],
-}
+// const message = "This is a message";
+// const myObj = {
+//   i1: ["Hello World"],
+//   i2: ["Hello Billy"],
+//   i3: ["Hello Sara"],
+// }
 
-test00.fxA1_addData(1, message);
-test00.fxA0_printLab();
+// test00.fxA1_addData(1, message);
+// test00.fxA0_printLab();
+
+
+module.exports = Lab;

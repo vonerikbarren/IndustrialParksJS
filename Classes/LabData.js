@@ -66,18 +66,18 @@ class LabData {
     ];
   }
 
-  fxA0_printLabDataOverview = (dataSection, dataAttribute) => {
-    if (dataSelection === 0) {
+  fxA0_printLabDataPreview = (dataSection, dataAttribute) => {
+    if (dataSection === 0) {
       console.log(this.Storage[0]);
-    } else if (dataSelection === 1) {
+    } else if (dataSection === 1) {
       console.log(this.Storage[1]);
-    } else if (dataSelection === 2) {
+    } else if (dataSection === 2) {
       console.log(this.Storage[2]);
-    } else if (dataSelection === 3) {
+    } else if (dataSection === 3) {
       console.log(this.Storage[3]);
-    } else if (dataSelection === 4) {
+    } else if (dataSection === 4) {
       console.log(this.Storage[4]);
-    } else if (dataSelection === 5) {
+    } else if (dataSection === 5) {
       console.log(this.Storage[5]);
     } else { console.log(this.Storage); }
   }
@@ -123,23 +123,26 @@ class LabData {
   }
 }
 
-const labTest = new LabData(
-  "To test Lab Class",
-  "Lab Code functionability",
-  "11.01.21",
-  "11.01.21",
-  1532,
-  2100,
-  "Good",
-  "Good",
-);
+// const labTest = new LabData(
+//   "To test Lab Class",
+//   "Lab Code functionability",
+//   "11.01.21",
+//   "11.01.21",
+//   1532,
+//   2100,
+//   "Good",
+//   "Good",
+// );
 
-labTest.fxA1_addLabData(
-  0,
-  2100,
-  2106,
-  ["Hello", "My Name is Von"],
-  "1 string was added"
-);
+// labTest.fxA1_addLabData(
+//   1,
+//   2100,
+//   2106,
+//   ["Hello", "My Name is Von"],
+//   "1 string was added"
+// );
 
-labTest.fxA0_printLabData();
+// labTest.fxA0_printLabDataPreview(1);
+
+
+module.exports = LabData;
