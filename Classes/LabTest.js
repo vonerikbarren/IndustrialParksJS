@@ -45,9 +45,3 @@ console.log("\n" + "# LabData01" + Divider);
 LabData01.fxA0_printLabDataPreview();
 
 
-/**
- * [_] - Job #1 = Mandarin Job
- * [_] = Job #2 = Software Engineering Job @ Cannon Search
- * [_] = Job #3 = Full Stack Developer @ TR3 in Stoneham
- * [_] = Job #4 = Full Stack Developer @ Infinity Quest in Natick
- */
